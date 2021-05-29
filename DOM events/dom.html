@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Document Object Model</title>
+    <style>
+        article{
+            border: 2px solid red;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="first">Exploring DOM</h1>
+     
+    <article>
+        <h3>article-1</h3>
+        <h4 class="author">author-1</h4>
+        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi voluptatum facilis enim iusto quam quibusdam natus cum ea unde? Iste.</p>
+    </article>
+    <article>
+        <h3>article-2</h3>
+        <h4 class="author">author-2</h4>
+        <p class="description">Beatae hic atque commodi vitae est delectus voluptatum ullam sunt! Eaque, esse. Ipsum cum necessitatibus nesciunt error laboriosam obcaecati eum?</p>
+    </article>
+    <article>
+        <h3>article-3</h3>
+        <h4 class="author">author-3</h4>
+        <p class="description">Assumenda, vitae voluptate. Dolore cum id tempora minus praesentium! Odit recusandae nostrum cupiditate quos exercitationem culpa aperiam magnam impedit molestias.</p>
+    </article>
+
+    <script>
+        // let first = document.getElementsById("first");
+        // first.style.textAlign = "center";
+        // first.style.color = "green";
+
+        let authors = document.getElementsByClassName("author");
+        
+        for (let i = 0; i <authors.length; i++) {
+           
+            let element = authors[i];
+            console.log(element.innerHTML);
+            element.innerHTML ="Wahidul" +"-"+ i;
+            element.style.color ="green";
+           
+        }
+    </script>
+</body>
+</html>
